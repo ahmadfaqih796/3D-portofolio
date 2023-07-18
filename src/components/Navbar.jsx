@@ -51,7 +51,6 @@ const Navbar = () => {
             priority
             alt="Picture of the author"
           />
-          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Ahmad &nbsp;
             <span className="sm:block hidden"> | Designer</span>
@@ -73,12 +72,6 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          {/* <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          /> */}
           <Image
             src={toggle ? close : menu}
             width={"auto"}
