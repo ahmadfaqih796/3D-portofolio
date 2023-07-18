@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
 import { logo, menu, close } from "../assets";
 import { styles } from "@/app/styles";
@@ -42,10 +43,18 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <Image
+            src={logo}
+            width={"auto"}
+            height={"auto"}
+            className="w-9 h-9 object-contain"
+            priority
+            alt="Picture of the author"
+          />
+          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Adrian &nbsp;
-            <span className="sm:block hidden"> | JavaScript Mastery</span>
+            Ahmad &nbsp;
+            <span className="sm:block hidden"> | Designer</span>
           </p>
         </Link>
 
@@ -64,10 +73,19 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
+          {/* <img
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain"
+            onClick={() => setToggle(!toggle)}
+          /> */}
+          <Image
+            src={toggle ? close : menu}
+            width={"auto"}
+            height={"auto"}
+            className="w-[28px] h-[28px] object-contain"
+            priority
+            alt="menur"
             onClick={() => setToggle(!toggle)}
           />
 
