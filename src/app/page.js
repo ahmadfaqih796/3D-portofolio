@@ -1,5 +1,5 @@
 "use client";
-import { About, Hero, Navbar } from "@/components";
+import { About, Experience, Hero, Navbar } from "@/components";
 import { BrowserRouter } from "react-router-dom";
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
             <Hero />
           </div>
           <About />
+          <Experience />
         </div>
       </BrowserRouter>
     </>
