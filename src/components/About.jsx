@@ -1,13 +1,15 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "@/app/styles";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <Tilt className="xs:w-[250px] md:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -20,10 +22,13 @@ const ServiceCard = ({ index, title, icon }) => (
         }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img
+        <Image
           src={icon}
+          width={"auto"}
+          height={"auto"}
           alt="web-development"
           className="w-16 h-16 object-contain"
+          priority
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
@@ -53,7 +58,7 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-between">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -1,5 +1,5 @@
 "use client";
-import { Hero, Navbar } from "@/components";
+import { About, Hero, Navbar } from "@/components";
 import { BrowserRouter } from "react-router-dom";
 
 export default function Home() {
