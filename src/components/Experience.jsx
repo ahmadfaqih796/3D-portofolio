@@ -1,16 +1,16 @@
-import React from "react";
+import { motion } from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
+import { styles } from "@/app/styles";
+import ImageHook from "@/hooks/Image";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { styles } from "@/app/styles";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -19,12 +19,12 @@ const ExperienceCard = ({ experience }) => {
         background: "#1d1836",
         color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
-          <img
+          <ImageHook
             src={experience.icon}
             alt={experience.company_name}
             className="w-[60%] h-[60%] object-contain"
