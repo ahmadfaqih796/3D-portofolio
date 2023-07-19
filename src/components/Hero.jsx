@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
-import { ComputersCanvas } from "./canvas";
 import { styles } from "@/app/styles";
-import HouseCanvas from "./canvas/House";
+import { motion } from "framer-motion";
+import CarCanvas from "./canvas/Car";
 
 const Hero = () => {
   return (
@@ -24,7 +23,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <HouseCanvas />
+      <div className="relative lg:w-[800px] h-full lg:ml-auto md:ml-0 md:w-full">
+        <CarCanvas />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
