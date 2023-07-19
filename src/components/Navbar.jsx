@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Image from "next/image";
 
-import { logo, menu, close } from "../assets";
+import { logo_f, menu, close } from "../assets";
 import { styles } from "@/app/styles";
 import { navLinks } from "@/constants";
 
@@ -44,7 +44,7 @@ const Navbar = () => {
           }}
         >
           <Image
-            src={logo}
+            src={logo_f}
             width={"auto"}
             height={"auto"}
             className="w-9 h-9 object-contain"
@@ -52,8 +52,8 @@ const Navbar = () => {
             alt="Picture of the author"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Ahmad &nbsp;
-            <span className="sm:block hidden"> | Designer</span>
+            Faqih &nbsp;
+            <span className="sm:block hidden"> | Web Developer</span>
           </p>
         </Link>
 
