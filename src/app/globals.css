@@ -13,6 +13,16 @@
   color-scheme: dark;
 }
 
+.vertical-timeline::before {
+  content: "ssss";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 200px;
+  background: red; /* var(--line-color) */
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

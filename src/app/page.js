@@ -13,6 +13,7 @@ export default function Home() {
           </div>
           <About />
           <Experience />
+          <About />
         </div>
       </BrowserRouter>
     </>

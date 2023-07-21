@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 
 const Car = ({ isMobile }) => {
   // Menggunakan useGLTF untuk memuat model 3D rumah dari file scene.gltf
-  const computer = useGLTF("./car/scene.gltf");
+  const car = useGLTF("./car/scene.gltf");
 
   return (
     <mesh>
@@ -22,9 +22,9 @@ const Car = ({ isMobile }) => {
       />
       <pointLight intensity={1} />
 
-      {/* Merender model 3D rumah */}
+      {/* Merender model 3D mobil */}
       <primitive
-        object={computer.scene}
+        object={car.scene}
         scale={isMobile ? 0.01 : 0.017}
         position={isMobile ? [0, -3.5, 0] : [0, -2.7, 0]}
         rotation={[-0.01, -0.2, 0]}
