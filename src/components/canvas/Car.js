@@ -34,25 +34,16 @@ const Car = ({ isMobile }) => {
 };
 
 const CarCanvas = () => {
-  // Mengecek apakah tampilan berada di perangkat mobile atau bukan menggunakan state `isMobile`
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Menambahkan listener untuk memantau perubahan ukuran layar
     const mediaQuery = window.matchMedia("(max-width: 1150px)");
-
-    // Mengatur nilai awal dari variabel state `isMobile`
     setIsMobile(mediaQuery.matches);
-
-    // Mendefinisikan fungsi callback untuk menangani perubahan media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
-
-    // Menambahkan fungsi callback sebagai listener untuk perubahan media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Menghapus listener ketika komponen dilepas (unmounted)
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
@@ -66,19 +57,14 @@ const CarCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      {/* Suspense untuk menampilkan fallback jika model 3D masih dimuat */}
       <Suspense fallback={<CanvasLoader />}>
-        {/* OrbitControls memungkinkan kontrol kamera menggunakan mouse atau sentuhan */}
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        {/* Memanggil komponen Car dengan memberikan properti isMobile */}
         <Car isMobile={isMobile} />
       </Suspense>
-
-      {/* Preload untuk memastikan semua sumber daya dimuat sebelum merender */}
       <Preload all />
     </Canvas>
   );

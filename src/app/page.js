@@ -1,5 +1,6 @@
 "use client";
 import { About, Contact, Experience, Hero, Navbar } from "@/components";
+import { StarsCanvas } from "@/components/canvas";
 import { BrowserRouter } from "react-router-dom";
 
 export default function Home() {
@@ -13,7 +14,10 @@ export default function Home() {
           </div>
           <About />
           <Experience />
-          <Contact />
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+          </div>
         </div>
       </BrowserRouter>
     </>
