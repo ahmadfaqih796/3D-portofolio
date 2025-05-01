@@ -7,7 +7,7 @@ import Projects from "./components/layouts/Projects";
 
 export default function App() {
   return (
-    <div className="bg-green-50 text-gray-800">
+    <div className="bg-green-50 text-gray-800 scroll-smooth">
       <Navbar />
       <Hero />
       <About />

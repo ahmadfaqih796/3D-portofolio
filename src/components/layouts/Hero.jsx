@@ -20,7 +20,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        Fullstack Developer – React | Next.js | Feathers.js <br /> Based in Bekasi, Indonesia
+        Fullstack Developer – React | Vue | Node.js | Next.js | Feathers.js <br /> Based in Bekasi, Indonesia
       </motion.p>
       <a
         href="#projects"
