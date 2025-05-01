@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 
-const links = ['hero', 'about', 'experience', 'projects', 'contact']
+const links = ['about', 'experience', 'projects', 'contact']
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
